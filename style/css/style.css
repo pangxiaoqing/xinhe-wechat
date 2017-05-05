@@ -1,0 +1,238 @@
+﻿@charset "utf-8";
+/* 禁用iPhone中Safari的字号自动调整 */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+/* 去除iPhone中默认的input样式 */
+input[type="submit"],
+
+input[type="reset"],
+
+input[type="button"],
+
+input{-webkit-appearance:none; resize: none;}
+/* 取消链接高亮  */
+body,div,ul,li,ol,h1,h2,h3,h4,h5,h6,input,textarea,select,p,dl,dt,dd,a,img,button,form,table,th,tr,td,tbody,article, 
+aside, details,figcaption,figure,footer,header,hgroup, menu,nav,section{ -webkit-tap-highlight-color:rgba(0, 0, 0, 0); }
+/* 设置HTML5元素为块 */
+article, aside, details,figcaption,figure,footer,header,hgroup, menu,nav,section {
+display: block;
+}
+/* 图片自适应 */
+img {
+max-width: 100%;
+height: auto;
+width:auto\9; /* ie8 */
+-ms-interpolation-mode:bicubic;/*为了照顾ie图片缩放失真*/
+}
+/* 初始化 */
+body,div,ul,li,ol,h1,h2,h3,h4,h5,h6,input,textarea,select,p,dl,dt,dd,a,img,button,form,table,th,tr,td,tbody,article, 
+aside, details,figcaption,figure,footer,header,hgroup, menu,nav,section{margin:0; padding:0; border:none;}
+body{font-family: Microsoft YaHei,Tahoma,Arial,sans-serif; color:#555; background-color:#F7F7F7;}
+em,i{font-style:normal;}
+strong{font-weight: normal;}
+.clearfix:after{content:""; display:block; visibility:hidden; height:0; clear:both;}
+.clearfix{zoom:1;}
+a{text-decoration:none; color:#969696; font-family: Microsoft YaHei,Tahoma,Arial,sans-serif;}
+a:hover{ text-decoration:none;}
+ul,ol{list-style:none;}
+h1, h2, h3, h4, h5, h6{ font-size:100%; font-family: Microsoft YaHei;}
+img{border: none;}
+.scope{min-width:320px; max-width:540px;}
+
+@font-face {font-family: 'iconfont';
+    src: url('../fonts/iconfont.eot'); /* IE9*/
+    src: url('../fonts/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/iconfont.woff') format('woff'), /* chrome、firefox */
+    url('../fonts/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../fonts/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+/* ---------------------页面主体开始！！---------------------- */
+.minbox{margin:0 0 100px 0;}
+.mar_bot{margin-bottom:100px;}
+/* header开始 */
+.header{width:100%;height:44px;background-color:#a77d4b;position:fixed;top:0;left:0;z-index:999;}
+.head{margin:0 auto;}
+.logo{position:absolute;top:6px;left:50%;margin-left:-73px;text-align:center;}
+.logo img{width:60%;}
+.menu{width:43px;height:44px;background:url(../images/menu.png) no-repeat 0 12px;background-size:60%;}
+ul.menu_li{width:100%;background-color:#fff;display:none;color:#999;}
+ul.menu_li li{padding:6px 0 6px 12px;box-sizing:border-box;}
+/* header结束 */
+
+/* 焦点图 */
+.slideBox{ position:relative; overflow:hidden;max-width:100%;/* 设置焦点图最大宽度 */ height:230px;overflow:hidden;}
+.slideBox .hd{ position:absolute; height:28px; line-height:28px; bottom:0; right:0; z-index:1; }
+.slideBox .hd li{ display:inline-block; width:8px; height:8px; -webkit-border-radius:8px; -moz-border-radius:8px; border-radius:8px; background:#d3d3d3; text-indent:-9999px; overflow:hidden; margin:0 6px;   }
+.slideBox .hd li.on{ background:#a77d4b;  }
+.slideBox .bd{ position:relative; z-index:0;height:230px;overflow:hidden;}
+.slideBox .bd li{ position:relative; text-align:center;  }
+.slideBox .bd li img{ background:url(../images/loading.gif) center center no-repeat;  vertical-align:top; width:100%;/* 图片宽度100%，达到自适应效果 */}
+.slideBox .bd li a{ -webkit-tap-highlight-color:rgba(0,0,0,0);  }  /* 去掉链接触摸高亮 */
+/* 焦点图结束 */
+/* 二级标题开始 */
+h3.con{padding:16px 5%;color:#b18f4e;font-size:1.2em;}
+.con span{border-left:3px solid #b18f4e;padding-left:5px;}
+h3.con em{color:#333;font-size:0.8em;padding-left:6%;}
+/* 二级标题结束 */
+/* 首页资讯内容开始 */
+.index_cont{padding:0 5%;color:#333;font-size:0.8em;}
+.index_cont li{background:url(../images/arr.png) no-repeat 0 center;background-size:12px;padding:5px 0 5px 16px;}
+.more{width:100%;height:27px;background-color:#f1dbc1;margin-top:10px;}
+.more a{font-size:0.8em;color:#98520e;text-align:center;display:block;line-height:27px;}
+#index_hg{height:400px;width:100%;}
+/* 首页资讯内容结束 */
+
+/* footer底部开始 */
+.footer{position:fixed;bottom:0;height:50px;line-height:50px;width:100%;text-align:center;background-color:#fff;}
+.footer a{color:#fff;font-size:1.1em;}
+.footer_left{width:49.8%;background-color:#a77d4b;float:left;}
+.footer_right{width:49.8%;background-color:#9c6d35;float:right;}
+/* footer底部结束 */
+
+
+/* ---------------------------产品链接页面开始------------------------ */
+
+.main {width: 90%;padding: 0 5%;}
+.main a {display: block;}
+.main .inner-main{width: 90%; margin: 0 auto 20px auto;}
+.main .link-left, .main .link-right { width: 48.9%; }
+.main .link-left img, .main .link-right img{width: 50%; }
+.main .link-right .xinhe99 {height: 170px; border-radius: 3px; background: #009add;}
+.main .link-right .xinhe99 img {width: 60%;}
+.main .link-right .xinhe99 img,.link-right .xinheHJ img,.link-left .xinheCF img, .link-left .xinheHC img
+ {position:absolute; margin: auto;left:0;top:0;bottom:0;right:0;}
+.main .link-right .xinheHJ {height: 130px; border-radius: 3px;}
+.main .link-left .xinheCF {height: 145px; border-radius: 3px;}
+.main .link-left .xinheHC {height:155px; border-radius: 3px;}
+
+
+/* ---------------------------下载APP页面开始----------------------- */
+.down {width: 90%; padding: 0 5%;}
+.down .xinheCF,.down .xinhe99,.down .xinheHC,.down .xinheHJ { margin: 10px auto;}
+.down .icon-col {width: 25%; border-radius: 5px;}
+.down .mg-r {margin-right: 7%;}
+.down .icon-col img {position:absolute; margin: auto; left:0; right:0; bottom:0;top:0; width:66%;}
+.colora77 {color: #a77d4b;}
+.bg1{background:#009add;}
+.bg2{background:#006537;}
+.bg3{background:#dc6a24;}
+.bg4{background:#a77d4b;}
+.fontWeight{font-weight:bold;}
+
+/* --------------------------网店查询页面开始----------------------- */
+
+.storetitle{
+	width:95%;
+	height:20px;
+	font-family:"微软雅黑";
+	font-weight: inherit;
+	color: #a77d4b;
+	padding-left:5%;
+
+}
+.storetitle img{
+	width:1%;
+	height:100%;
+	display:inline-block;
+}
+.storelist{
+	width:90%;
+	font-family:"微软雅黑";
+	font-weight: inherit;
+	padding-left:5%;
+	padding-right:5%;
+	display:inline-block;
+	border-bottom: 1px #e8e8e8 solid;
+}
+.storelist ul{
+	margin: 0px 0px 0px 0px;
+	border-top:1px #e8e8e8 solid;
+	display:inline-block;
+	padding-bottom: 10px;
+	color:#afafae;
+}
+.storelist ul li{
+	display:inline-block;
+	width: 100%;
+}
+.storelist ul li span{
+	display:inline-block;
+	width:33.3%;
+	
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 1.0em;
+	
+}
+.storeshowd{
+	width:90%;
+	font-family:"微软雅黑";
+	font-weight: inherit;
+	padding-left:5%;
+	padding-right:5%;
+	display:inline-block;
+}
+.storeshowd span:nth-child(odd){
+	display:inline-block;
+	width:5%;
+
+}
+.storeshowd span:nth-child(even){
+   display:inline-block;
+   width:85%;
+}
+.storeshowd img{
+   width:80%;
+}
+.borshow{
+	border-top:1px #e8e8e8 solid;
+	border-bottom:1px #e8e8e8 solid; 
+}
+
+
+
+
+/* ------------------------感谢有你.携手同行页面开始---------------------- */
+.detailstitle{
+	color: #a77d4b;
+	padding-left:5%;
+	padding-right:5%;
+	width:90%;
+	font-family:"微软雅黑";
+	display:inline-block;
+}
+.detailscontent{
+	padding-left:5%;
+	padding-right:5%;
+	width:90%;
+	display: inline-block;
+}
+.detailsimg{
+	display:inline-block;
+	width:100%;
+}
+  
+
+.sshowtel{
+	background:url(../images/ws_tel.png) no-repeat 0 center;
+	background-size:12px;
+	padding-left:18px;
+
+}
+.sshowads{
+	background:url(../images/ws_ads.png) no-repeat 0 5px;
+	background-size:12px;
+	padding-left:18px;
+
+}
+
+/* 加载中 */
+.loading{position:absolute;left:50%;top:30%;margin-left:-50px;width:100px;height:100px;background:rgba(0,0,0,0.8);-moz-opacity: 0.8; opacity:.80; filter: alpha(opacity=80);z-index:99;border-radius:10px;}
+.loading img{width:26%;padding:20px 37% 0 37%;}
+.loading_zi{font-size:1.0em;color:#fff;text-align:center;margin-top:12px;}
+#doyoo_panel{display:none !important;}
+
+.bg5{background-color:#008cd6;}
